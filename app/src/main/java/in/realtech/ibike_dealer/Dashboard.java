@@ -388,7 +388,7 @@ public class Dashboard extends AppCompatActivity
                 OutputStream os = conn.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(
                         new OutputStreamWriter(os, StandardCharsets.UTF_8));
-                writer.write(query);
+                writer.write(query);//("{"\data\":\All\"}")
                 writer.flush();
                 writer.close();
                 os.close();

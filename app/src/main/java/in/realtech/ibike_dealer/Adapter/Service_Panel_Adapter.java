@@ -36,6 +36,8 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -90,7 +92,19 @@ public class Service_Panel_Adapter extends RecyclerView.Adapter<Service_Panel_Ad
             holder.btn.setVisibility(View.GONE);
         }
         if (root_response.getReassign_count().equals("0")) {
-            holder.btn.setText("Accept");
+          if (root_response.fitter_name!=null && root_response.fitter_name.equals(currentUserName))
+          {
+              holder.sphiddenlay.setVisibility(View.VISIBLE);
+              holder.btn.setVisibility(View.GONE);
+          }
+          else if (root_response.fitter_name!=null)
+          {
+            holder.btn.setText("Accepted by"+root_response.fitter_name);
+          }
+          else{
+              holder.btn.setText("Accept");
+          }
+
         } else if (root_response.getReassign_count().equals("-3")) {
             holder.btn.setText("Completed");
         } else if (Integer.parseInt(root_response.getReassign_count()) > 0) {
@@ -114,7 +128,7 @@ public class Service_Panel_Adapter extends RecyclerView.Adapter<Service_Panel_Ad
                             root_response.setBtnVisibled(true);
                             holder.sphiddenlay.setVisibility(View.VISIBLE);
                             holder.btn.setVisibility(View.GONE);
-                            root_response.fitter_name=currentUserName;
+                            root_response.fitter_name = currentUserName;
                             new Asyncaccept(root_response, holder.btn.getText().toString(), holder, position).execute();
                             dialogInterface.dismiss();
                         }
@@ -294,21 +308,28 @@ public class Service_Panel_Adapter extends RecyclerView.Adapter<Service_Panel_Ad
 
                 // Append parameters to URL
                 // "action":"accept","sno":"1","imei":"","vehicle_no":"","fitter_name":"","fitter_accept_time":""
-                Uri.Builder builder = new Uri.Builder()
-                        .appendQueryParameter("action", staus.toLowerCase(Locale.ROOT))
-                        .appendQueryParameter("sno", mPanel.getSno())
-                        .appendQueryParameter("imei", mPanel.getImei())
-                        .appendQueryParameter("vehicle_no", mPanel.getVehicleno())
-                        .appendQueryParameter("fitter_name", mPanel.getFitter_name())
-                        .appendQueryParameter("fitter_accept_time", mPanel.getFitter_accept_time());
-
-                query = builder.build().getEncodedQuery();
-                Log.d("TAG", "queryData: " + query);
+                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                Date date = new Date();
+                // Uri.Builder builder = new Uri.Builder()
+//                        .appendQueryParameter("action", staus.toLowerCase(Locale.ROOT))
+//                        .appendQueryParameter("sno", mPanel.getSno())
+//                        .appendQueryParameter("imei", mPanel.getImei())
+//                        .appendQueryParameter("vehicle_no", mPanel.getVehicleno())
+//                        .appendQueryParameter("fitter_name", mPanel.getFitter_name())
+//                        .appendQueryParameter("fitter_accept_time",formatter.format(date));
+                //query = builder.build().getEncodedQuery();
+                //Log.d("TAG", "queryData: " + query);
                 // Open connection for sending data
                 OutputStream os = conn.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(
                         new OutputStreamWriter(os, "UTF-8"));
-                writer.write(query);
+                writer.write("{\"action\":\"accept\"," +
+                        "\"sno\":\"\"," +
+                        "\"imei\":\"\"," +
+                        "\"vehicle_no\":\"\"," +
+                        "\"fitter_name\":\"\"," +
+                        "\"fitter_accept_time\":\"\"," +
+                        " }");
                 writer.flush();
                 writer.close();
                 os.close();
@@ -355,7 +376,7 @@ public class Service_Panel_Adapter extends RecyclerView.Adapter<Service_Panel_Ad
             super.onPostExecute(s);
             Log.d("TAG", "onPostExecute: servicePanel" + s);
             if (staus.equals("Accept")) {
-                panelList.setRefreshData(mPanel.sno,positions , mPanel.isBtnVisibled());
+                panelList.setRefreshData(mPanel.sno, positions, mPanel.isBtnVisibled());
             }
         }
     }
