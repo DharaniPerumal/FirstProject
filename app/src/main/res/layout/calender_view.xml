@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/searchIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_date"/>
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:ems="11"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:backgroundTint="@color/white"
+        android:imeOptions="actionDone"
+        android:editable="false"
+        tools:ignore="Deprecated,UnusedAttribute">
+        <requestFocus/>
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/closeImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E0DADA"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="2dp"
+        android:src="@drawable/ic_action_navigation_close"
+        android:layout_marginStart="5dp" />
+
+</LinearLayout>

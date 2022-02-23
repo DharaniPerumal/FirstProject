@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.realtech.ibike_dealer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher_ibikes_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_ibikes_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:node="merge">
+        <activity
+            android:name=".Popup_completed"
+            android:exported="true" />
+        <activity
+            android:name=".Cancellation"
+            android:exported="true" />
+        <activity
+            android:name=".Completed_Cancel"
+            android:exported="true" />
+        <activity
+            android:name=".Completion_Task"
+            android:exported="true" />
+        <activity
+            android:name=".Service_List"
+            android:exported="true" />
+        <activity
+            android:name=".content_dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".Panel_List"
+            android:exported="true" />
+        <activity android:name=".Sales_activation_code" />
+        <activity android:name=".ThirdFragment" />
+        <activity android:name=".SecondFragment" />
+        <activity android:name=".FirstFragment" />
+        <activity android:name=".Webview_online" />
+        <activity android:name=".Payment_Activity" />
+        <activity android:name=".ResendOtp" />
+        <activity android:name=".UnitFullScreen" />
+        <activity android:name=".InvoiceSold" />
+        <activity android:name=".imgupload" />
+        <activity android:name=".update_Activity" />
+        <activity android:name=".Full_Srce_Myprofile" />
+        <activity android:name=".Cancel_orders" />
+        <activity android:name=".delivered_order" />
+        <activity android:name=".FullscreenActivity" />
+        <activity android:name=".My_orders" />
+        <activity android:name=".Account_details_purchase" />
+        <activity android:name=".Check_Address" />
+        <activity android:name=".BuyAddress" />
+        <activity android:name=".purchase_product" />
+        <activity android:name=".Address_dealer" />
+        <activity android:name=".Return_to_Store" />
+        <activity android:name=".checkpermisions" />
+        <activity android:name=".Dateselect" />
+        <activity android:name=".Customers_detail_display" />
+        <activity android:name=".Pending_activity" />
+        <activity android:name=".TotalStock" />
+        <activity android:name=".Qrcodegentrater" />
+        <activity android:name=".Customers" />
+        <activity android:name=".Earnings" />
+        <activity android:name=".Sold" />
+        <activity android:name=".ScannerActivity" />
+        <activity
+            android:name=".stock_available"
+            android:parentActivityName=".Dashboard" />
+        <activity android:name=".Datepicker" />
+        <activity android:name=".CardActivity" />
+        <activity android:name=".Bankaccdetails" />
+        <activity android:name=".changeactivity" />
+        <activity android:name=".myprofile" />
+        <activity
+            android:name=".Dashboard"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Otpview"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            tools:replace="android:screenOrientation" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CardListActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

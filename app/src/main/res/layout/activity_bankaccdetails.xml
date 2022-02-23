@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginLeft="30dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:textSize="26dp"-->
+        <!--/>-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#7C6262"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#957E9B"
+            android:padding="30dp">
+
+        </TextView>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#E9E5E5"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="3dp">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="-"
+
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/bankname"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/bankname" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:drawableStart="@drawable/acc_number"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="100dp"
+        android:drawableLeft="@drawable/acc_number" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:drawableStart="@drawable/ifsc_acc"
+        android:layout_marginLeft="20dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="170dp"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/ifsc_acc" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:drawableStart="@drawable/verified"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="-"
+        android:drawablePadding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="240dp"
+        android:drawableLeft="@drawable/verified" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="-"
+        android:drawableStart="@drawable/upilink"
+        android:layout_marginBottom="20dp"
+        android:drawablePadding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="310dp"
+
+        android:drawableLeft="@drawable/upilink" />
+
+
+
+
+        <ImageView
+            android:id="@+id/imagev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/copyy"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="380dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

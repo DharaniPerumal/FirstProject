@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/card_view"
+        android:layout_width="402dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card_view"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Verification Code"
+            android:textColor="#EFF0F5"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/title1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="Enter your 6 digit OTP number"
+        android:textColor="#F4F4F7"
+        android:textSize="20dp" />
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/card_view1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginTop="240dp"-->
+    <!--        android:layout_marginRight="20dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        >-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:layout_below="@id/title1"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/etDigit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:backgroundTint="#ffff"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:nextFocusLeft="@+id/etDigit6"
+                    android:nextFocusRight="@+id/etDigit2"
+                    />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp">
+
+                <EditText
+                    android:id="@+id/etDigit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:backgroundTint="#ffff"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:nextFocusLeft="@+id/etDigit1"
+                    android:nextFocusRight="@+id/etDigit3"/>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp">
+
+                <EditText
+                    android:id="@+id/etDigit3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:backgroundTint="#ffff"
+                    android:maxLines="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:nextFocusLeft="@+id/etDigit2"
+                    android:nextFocusRight="@+id/etDigit4"/>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+                <EditText
+                    android:id="@+id/etDigit4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:backgroundTint="#ffff"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:nextFocusLeft="@+id/etDigit3"
+                    android:nextFocusRight="@+id/etDigit5"/>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"  >
+
+                <EditText
+                    android:id="@+id/etDigit5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:backgroundTint="#ffff"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:nextFocusLeft="@+id/etDigit4"
+                    android:nextFocusRight="@+id/etDigit6"  />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/etDigit6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:backgroundTint="#ffff"
+                    android:maxLines="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:nextFocusLeft="@+id/etDigit5"
+                    android:nextFocusRight="@+id/etDigit1"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--    </androidx.cardview.widget.CardView>-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/btn_press"
+        android:gravity="center"
+        android:onClick="checkLogin"
+        android:padding="2dp"
+        android:text="Login"
+        android:textColor="#ffffff" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:id="@+id/textvalidity"
+        android:text="validity Till - 10:00 sec"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
+        android:padding="10dp"
+        android:textColor="#ffff"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:id="@+id/textvalidity1"
+        android:text="validity Till - 10:00 sec"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
+        android:padding="10dp"
+        android:textColor="#DF0909"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+
+        />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".imgupload" >
+
+    <Button
+        android:id="@+id/btn_multi_img_1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#000000"
+        android:text="multi_img1"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_multi_img_2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/btn_multi_img_1"
+        android:layout_marginTop="10dp"
+        android:background="#000000"
+        android:text="multi_img2"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_multi_img_3"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/btn_multi_img_2"
+        android:layout_marginTop="10dp"
+        android:background="#000000"
+        android:text="multi_img3"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_multi_img_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_multi_img_3"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_multi_img1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:contentDescription="empty" />
+
+        <ImageView
+            android:id="@+id/iv_multi_img2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@+id/iv_multi_img1"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:contentDescription="empty" />
+
+        <ImageView
+            android:id="@+id/iv_multi_img3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/iv_multi_img2"
+            android:layout_weight="1"
+            android:contentDescription="empty" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_multi_upload"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/ll_multi_img_holder"
+        android:layout_marginTop="10dp"
+        android:background="#000000"
+        android:text="multi_upload"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+</RelativeLayout>

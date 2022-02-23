@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="145dp"
+        android:contentDescription="string/image"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/serialnumber"
+        android:drawablePadding="10dp"
+        android:layout_toRightOf="@+id/icon"
+        android:textColor="#030303"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:drawableLeft="@drawable/serialnumber" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingLeft="5dp"
+        android:drawableStart="@drawable/ic_date_range_black_24dp"
+        android:drawablePadding="10dp"
+        android:textColor="#282829"
+        android:textSize="14dp"
+        android:drawableLeft="@drawable/ic_date_range_black_24dp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:drawableStart="@drawable/activation"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:drawablePadding="10dp"
+        android:textColor="#39393A"
+        android:textSize="14dp"
+        android:drawableLeft="@drawable/activation" />
+
+    <TextView
+        android:id="@+id/plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_marginTop="25dp"
+        android:text="--"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ver"
+        android:layout_marginLeft="05dp"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingLeft="0dp"
+        android:textColor="#39393A"
+        android:textSize="14dp"
+        android:drawableLeft="@drawable/ver" />
+
+    <TextView
+        android:id="@+id/mobiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_marginTop="53dp"
+        android:text="--"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_phone_android_black_24dp"
+        android:gravity="left"
+        android:layout_marginLeft="05dp"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingLeft="0dp"
+        android:textColor="#39393A"
+        android:textSize="14dp"
+        android:drawableLeft="@drawable/ic_version_black_24dp" />
+
+</RelativeLayout>

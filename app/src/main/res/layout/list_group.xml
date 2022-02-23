@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#FCFCFC">
+
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:textSize="17dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:drawablePadding="3dp"
+        android:drawableStart="@drawable/ic_confirmation_number_black_24dp"
+        android:text=" group"
+        android:textColor="#F2050505"
+        android:drawableLeft="@drawable/ic_confirmation_number_black_24dp" />
+
+</LinearLayout>
